@@ -5,24 +5,27 @@ import Ejemplo1 from './hooks/Ejemplo1';
 import Ejemplo2 from './hooks/Ejemplo2';
 import MiComponenteConContexto from './hooks/Ejemplo3';
 import Ejemplo4 from './hooks/Ejemplo4';
+import GreetingStyled from './pure/greetingStyled';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        
-        {/* <TaskListComponent></TaskListComponent> */}     
+
+        {/*<TaskListComponent></TaskListComponent>*/}
+
         {/* Ejemplos de HOOKS*/}
         {/*<Ejemplo1></Ejemplo1>*/}
         {/*<Ejemplo2></Ejemplo2>*/}
         {/* <MiComponenteConContexto></MiComponenteConContexto> */}
-        <Ejemplo4 nombre="Martin">
-          {/* Todo lo que hay auí, es tradado como props.children */}
+        {/* <Ejemplo4 nombre="Martin">
           <h3>
             Contenido del props.children
           </h3>
-        </Ejemplo4>
+        </Ejemplo4>*/}
+
+        <GreetingStyled name='Martin'></GreetingStyled>
       </header>
     </div>
   );
