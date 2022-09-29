@@ -6,6 +6,8 @@ import Ejemplo2 from './hooks/Ejemplo2';
 import MiComponenteConContexto from './hooks/Ejemplo3';
 import Ejemplo4 from './hooks/Ejemplo4';
 import GreetingStyled from './pure/greetingStyled';
+import Clock from './hooks/lifecycle/Clock';
+import ClockFunctional from './hooks/lifecycle/ClockFunctional';
 
 function App() {
   return (
@@ -25,7 +27,9 @@ function App() {
           </h3>
         </Ejemplo4>*/}
 
-        <GreetingStyled name='Martin'></GreetingStyled>
+        {/* <GreetingStyled name='Martin'></GreetingStyled> */}
+        {/* <Clock></Clock> */}
+        <ClockFunctional></ClockFunctional>
       </header>
     </div>
   );

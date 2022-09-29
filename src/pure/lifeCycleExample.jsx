@@ -3,7 +3,6 @@
  * métodos de ciclo de vida
  */
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class lifeCycleExample extends Component {
     constructor(props) {
@@ -50,9 +49,5 @@ class lifeCycleExample extends Component {
         );
     }
 }
-
-lifeCycleExample.propTypes = {
-
-};
 
 export default lifeCycleExample;
