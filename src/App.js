@@ -6,6 +6,7 @@ import Ejemplo2 from './hooks/Ejemplo2';
 import MiComponenteConContexto from './hooks/Ejemplo3';
 import Ejemplo4 from './hooks/Ejemplo4';
 import GreetingStyled from './pure/greetingStyled';
+import Father from './components/container/father';
 
 function App() {
   return (
@@ -13,21 +14,25 @@ function App() {
       {/*<header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />*/}
 
-        {/*<TaskListComponent></TaskListComponent>*/}
+      {/*<TaskListComponent></TaskListComponent>*/}
 
-        {/* Ejemplos de HOOKS*/}
-        {/*<Ejemplo1></Ejemplo1>*/}
-        {/*<Ejemplo2></Ejemplo2>*/}
-        {/* <MiComponenteConContexto></MiComponenteConContexto> */}
-        {/* <Ejemplo4 nombre="Martin">
+      {/* Ejemplos de HOOKS*/}
+      {/*<Ejemplo1></Ejemplo1>*/}
+      {/*<Ejemplo2></Ejemplo2>*/}
+      {/* <MiComponenteConContexto></MiComponenteConContexto> */}
+      {/* <Ejemplo4 nombre="Martin">
           <h3>
             Contenido del props.children
           </h3>
         </Ejemplo4>*/}
 
-        {/*<GreetingStyled name='Martin'></GreetingStyled>*/}
+      {/*<GreetingStyled name='Martin'></GreetingStyled>*/}
       {/*</header>*/}
-      <TaskListComponent></TaskListComponent>
+
+      {/* Gestion de Eventos */}
+      <Father></Father>
+      
+      {/* <TaskListComponent></TaskListComponent> */}
     </div>
   );
 }
