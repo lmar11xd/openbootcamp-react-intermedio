@@ -30,9 +30,9 @@ function App() {
       {/*</header>*/}
 
       {/* Gestion de Eventos */}
-      <Father></Father>
-      
-      {/* <TaskListComponent></TaskListComponent> */}
+      {/*<Father></Father>*/}
+
+      <TaskListComponent></TaskListComponent>
     </div>
   );
 }

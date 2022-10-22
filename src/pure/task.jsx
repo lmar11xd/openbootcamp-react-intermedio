@@ -6,12 +6,12 @@ import { Task } from '../models/task.class'
 import '../styles/task.scss';
 import { LEVELS } from '../models/levels.enum';
 
-function TaskComponent({ task }) {
+function TaskComponent({ task, complete, remove }) {
 
   useEffect(() => {
     console.log('Tarea creada');
     return () => {
-      console.log(`Taks: {task.name} is going to unmount`);
+      console.log(`Taks: ${task.name} is going to unmount`);
     }
   }, [task]);
 
@@ -47,9 +47,9 @@ function TaskComponent({ task }) {
 
   function taskCompletedIcon() {
     if(task.completed) {
-      return (<i className='bi-toggle-on' style={{color:'green'}}></i>)
+      return (<i onClick={() => complete(task)} className='bi-toggle-on task-action' style={{color:'green'}}></i>)
     }else{
-      return (<i className='bi-toggle-off' style={{color:'grey'}}></i>)
+      return (<i onClick={() => complete(task)} className='bi-toggle-off task-action' style={{color:'grey'}}></i>)
     }
   }
 
@@ -62,7 +62,7 @@ function TaskComponent({ task }) {
       </td>
       <td className='align-middle'>
         { taskCompletedIcon() }
-        <i className='bi-trash' style={{color: 'tomato', fontWeight: 'bold'}}></i>
+        <i className='bi-trash task-action' style={{color: 'tomato', fontWeight: 'bold'}} onClick={() => remove(task)}></i>
         {/* <span>{ task.completed ? 'Completed' : 'Pending' }</span> */}
       </td>
     </tr>
@@ -70,7 +70,9 @@ function TaskComponent({ task }) {
 }
 
 TaskComponent.propTypes = {
-    task: PropTypes.instanceOf(Task)
+    task: PropTypes.instanceOf(Task).isRequired,
+    complete: PropTypes.func.isRequired,
+    remove: PropTypes.func.isRequired
 }
 
 export default TaskComponent
